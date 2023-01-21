@@ -1,0 +1,972 @@
+- model: mainpage.champion
+  pk: 266
+  fields:
+    name: Aatrox
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 103
+  fields:
+    name: Ahri
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 84
+  fields:
+    name: Akali
+    valid: False
+    reason: "terrorist"
+- model: mainpage.champion
+  pk: 166
+  fields:
+    name: Akshan
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 12
+  fields:
+    name: Alistar
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 32
+  fields:
+    name: Amumu
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 34
+  fields:
+    name: Anivia
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 1
+  fields:
+    name: Annie
+    valid: False
+    reason: "pedo"
+- model: mainpage.champion
+  pk: 523
+  fields:
+    name: Aphelios
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 22
+  fields:
+    name: Ashe
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 136
+  fields:
+    name: Aurelion Sol
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 268
+  fields:
+    name: Azir
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 432
+  fields:
+    name: Bard
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 200
+  fields:
+    name: Bel'Veth
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 53
+  fields:
+    name: Blitzcrank
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 63
+  fields:
+    name: Brand
+    valid: False
+    reason: "racist"
+- model: mainpage.champion
+  pk: 201
+  fields:
+    name: Braum
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 51
+  fields:
+    name: Caitlyn
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 164
+  fields:
+    name: Camille
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 69
+  fields:
+    name: Cassiopeia
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 31
+  fields:
+    name: Cho'Gath
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 42
+  fields:
+    name: Corki
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 122
+  fields:
+    name: Darius
+    valid: False
+    reason: "braindead"
+- model: mainpage.champion
+  pk: 131
+  fields:
+    name: Diana
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 119
+  fields:
+    name: Draven
+    valid: False
+    reason: "racist"
+- model: mainpage.champion
+  pk: 36
+  fields:
+    name: Dr. Mundo
+    valid: False
+    reason: "braindead"
+- model: mainpage.champion
+  pk: 245
+  fields:
+    name: Ekko
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 60
+  fields:
+    name: Elise
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 28
+  fields:
+    name: Evelynn
+    valid: False
+    reason: "racist"
+- model: mainpage.champion
+  pk: 81
+  fields:
+    name: Ezreal
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 9
+  fields:
+    name: Fiddlesticks
+    valid: False
+    reason: "mentally challenged"
+- model: mainpage.champion
+  pk: 114
+  fields:
+    name: Fiora
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 105
+  fields:
+    name: Fizz
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 3
+  fields:
+    name: Galio
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 41
+  fields:
+    name: Gangplank
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 86
+  fields:
+    name: Garen
+    valid: False
+    reason: "braindead"
+- model: mainpage.champion
+  pk: 150
+  fields:
+    name: Gnar
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 79
+  fields:
+    name: Gragas
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 104
+  fields:
+    name: Graves
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 887
+  fields:
+    name: Gwen
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 120
+  fields:
+    name: Hecarim
+    valid: False
+    reason: "racist"
+- model: mainpage.champion
+  pk: 74
+  fields:
+    name: Heimerdinger
+    valid: False
+    reason: "mentally challenged"
+- model: mainpage.champion
+  pk: 420
+  fields:
+    name: Illaoi
+    valid: False
+    reason: "freak"
+- model: mainpage.champion
+  pk: 39
+  fields:
+    name: Irelia
+    valid: False
+    reason: "terrorist"
+- model: mainpage.champion
+  pk: 427
+  fields:
+    name: Ivern
+    valid: False
+    reason: "pedo"
+- model: mainpage.champion
+  pk: 40
+  fields:
+    name: Janna
+    valid: False
+    reason: "egirl"
+- model: mainpage.champion
+  pk: 59
+  fields:
+    name: Jarvan IV
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 24
+  fields:
+    name: Jax
+    valid: False
+    reason: "pedo"
+- model: mainpage.champion
+  pk: 126
+  fields:
+    name: Jayce
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 202
+  fields:
+    name: Jhin
+    valid: False
+    reason: "insane"
+- model: mainpage.champion
+  pk: 222
+  fields:
+    name: Jinx
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 145
+  fields:
+    name: Kai'Sa
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 429
+  fields:
+    name: Kalista
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 43
+  fields:
+    name: Karma
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 30
+  fields:
+    name: Karthus
+    valid: False
+    reason: "insane"
+- model: mainpage.champion
+  pk: 38
+  fields:
+    name: Kassadin
+    valid: False
+    reason: "racist"
+- model: mainpage.champion
+  pk: 55
+  fields:
+    name: Katarina
+    valid: False
+    reason: "terrorist"
+- model: mainpage.champion
+  pk: 10
+  fields:
+    name: Kayle
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 141
+  fields:
+    name: Kayn
+    valid: False
+    reason: "terrorist"
+- model: mainpage.champion
+  pk: 85
+  fields:
+    name: Kennen
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 121
+  fields:
+    name: Kha'Zix
+    valid: False
+    reason: "mongoloid"
+- model: mainpage.champion
+  pk: 203
+  fields:
+    name: Kindred
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 240
+  fields:
+    name: Kled
+    valid: False
+    reason: "tide pods enjoyer"
+- model: mainpage.champion
+  pk: 96
+  fields:
+    name: Kog'Maw
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 897
+  fields:
+    name: K'Sante
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 7
+  fields:
+    name: LeBlanc
+    valid: False
+    reason: "racist"
+- model: mainpage.champion
+  pk: 64
+  fields:
+    name: Lee Sin
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 89
+  fields:
+    name: Leona
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 876
+  fields:
+    name: Lillia
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 127
+  fields:
+    name: Lissandra
+    valid: False
+    reason: "stinky"
+- model: mainpage.champion
+  pk: 236
+  fields:
+    name: Lucian
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 117
+  fields:
+    name: Lulu
+    valid: False
+    reason: "egirl"
+- model: mainpage.champion
+  pk: 99
+  fields:
+    name: Lux
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 54
+  fields:
+    name: Malphite
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 90
+  fields:
+    name: Malzahar
+    valid: False
+    reason: "racist"
+- model: mainpage.champion
+  pk: 57
+  fields:
+    name: Maokai
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 11
+  fields:
+    name: Master Yi
+    valid: False
+    reason: "drug abuser"
+- model: mainpage.champion
+  pk: 21
+  fields:
+    name: Miss Fortune
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 62
+  fields:
+    name: Wukong
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 82
+  fields:
+    name: Mordekaiser
+    valid: False
+    reason: "beats his wife"
+- model: mainpage.champion
+  pk: 25
+  fields:
+    name: Morgana
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 267
+  fields:
+    name: Nami
+    valid: False
+    reason: "egirl"
+- model: mainpage.champion
+  pk: 75
+  fields:
+    name: Nasus
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 111
+  fields:
+    name: Nautilus
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 518
+  fields:
+    name: Neeko
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 76
+  fields:
+    name: Nidalee
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 895
+  fields:
+    name: Nilah
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 56
+  fields:
+    name: Nocturne
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 20
+  fields:
+    name: Nunu & Willump
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 2
+  fields:
+    name: Olaf
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 61
+  fields:
+    name: Orianna
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 516
+  fields:
+    name: Ornn
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 80
+  fields:
+    name: Pantheon
+    valid: False
+    reason: "braindead"
+- model: mainpage.champion
+  pk: 78
+  fields:
+    name: Poppy
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 555
+  fields:
+    name: Pyke
+    valid: False
+    reason: "gibbon iq"
+- model: mainpage.champion
+  pk: 246
+  fields:
+    name: Qiyana
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 133
+  fields:
+    name: Quinn
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 497
+  fields:
+    name: Rakan
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 33
+  fields:
+    name: Rammus
+    valid: False
+    reason: "drink driving"
+- model: mainpage.champion
+  pk: 421
+  fields:
+    name: Rek'Sai
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 526
+  fields:
+    name: Rell
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 888
+  fields:
+    name: Renata Glasc
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 58
+  fields:
+    name: Renekton
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 107
+  fields:
+    name: Rengar
+    valid: False
+    reason: "racist"
+- model: mainpage.champion
+  pk: 92
+  fields:
+    name: Riven
+    valid: False
+    reason: "virgin"
+- model: mainpage.champion
+  pk: 68
+  fields:
+    name: Rumble
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 13
+  fields:
+    name: Ryze
+    valid: False
+    reason: "adderall abuser"
+- model: mainpage.champion
+  pk: 360
+  fields:
+    name: Samira
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 113
+  fields:
+    name: Sejuani
+    valid: False
+    reason: "take a shower"
+- model: mainpage.champion
+  pk: 235
+  fields:
+    name: Senna
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 147
+  fields:
+    name: Seraphine
+    valid: False
+    reason: "egirl"
+- model: mainpage.champion
+  pk: 875
+  fields:
+    name: Sett
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 35
+  fields:
+    name: Shaco
+    valid: False
+    reason: "sociopath"
+- model: mainpage.champion
+  pk: 98
+  fields:
+    name: Shen
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 102
+  fields:
+    name: Shyvana
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 27
+  fields:
+    name: Singed
+    valid: False
+    reason: "mentally challenged"
+- model: mainpage.champion
+  pk: 14
+  fields:
+    name: Sion
+    valid: False
+    reason: "degenerate"
+- model: mainpage.champion
+  pk: 15
+  fields:
+    name: Sivir
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 72
+  fields:
+    name: Skarner
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 37
+  fields:
+    name: Sona
+    valid: False
+    reason: "egirl"
+- model: mainpage.champion
+  pk: 16
+  fields:
+    name: Soraka
+    valid: False
+    reason: "egirl"
+- model: mainpage.champion
+  pk: 50
+  fields:
+    name: Swain
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 517
+  fields:
+    name: Sylas
+    valid: False
+    reason: "adderall abuser"
+- model: mainpage.champion
+  pk: 134
+  fields:
+    name: Syndra
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 223
+  fields:
+    name: Tahm Kench
+    valid: False
+    reason: "take a shower"
+- model: mainpage.champion
+  pk: 163
+  fields:
+    name: Taliyah
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 91
+  fields:
+    name: Talon
+    valid: False
+    reason: "gibbon iq"
+- model: mainpage.champion
+  pk: 44
+  fields:
+    name: Taric
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 17
+  fields:
+    name: Teemo
+    valid: False
+    reason: "ugly"
+- model: mainpage.champion
+  pk: 412
+  fields:
+    name: Thresh
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 18
+  fields:
+    name: Tristana
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 48
+  fields:
+    name: Trundle
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 23
+  fields:
+    name: Tryndamere
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 4
+  fields:
+    name: Twisted Fate
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 29
+  fields:
+    name: Twitch
+    valid: False
+    reason: "racist"
+- model: mainpage.champion
+  pk: 77
+  fields:
+    name: Udyr
+    valid: False
+    reason: "braindead"
+- model: mainpage.champion
+  pk: 6
+  fields:
+    name: Urgot
+    valid: False
+    reason: "feet fetish"
+- model: mainpage.champion
+  pk: 110
+  fields:
+    name: Varus
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 67
+  fields:
+    name: Vayne
+    valid: False
+    reason: "virgin"
+- model: mainpage.champion
+  pk: 45
+  fields:
+    name: Veigar
+    valid: False
+    reason: "war criminal"
+- model: mainpage.champion
+  pk: 161
+  fields:
+    name: Vel'Koz
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 711
+  fields:
+    name: Vex
+    valid: False
+    reason: "emo"
+- model: mainpage.champion
+  pk: 254
+  fields:
+    name: Vi
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 234
+  fields:
+    name: Viego
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 112
+  fields:
+    name: Viktor
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 8
+  fields:
+    name: Vladimir
+    valid: False
+    reason: "racist"
+- model: mainpage.champion
+  pk: 106
+  fields:
+    name: Volibear
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 19
+  fields:
+    name: Warwick
+    valid: False
+    reason: "insane"
+- model: mainpage.champion
+  pk: 498
+  fields:
+    name: Xayah
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 101
+  fields:
+    name: Xerath
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 5
+  fields:
+    name: Xin Zhao
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 157
+  fields:
+    name: Yasuo
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 777
+  fields:
+    name: Yone
+    valid: False
+    reason: "adderall abuser"
+- model: mainpage.champion
+  pk: 83
+  fields:
+    name: Yorick
+    valid: False
+    reason: "take a shower"
+- model: mainpage.champion
+  pk: 350
+  fields:
+    name: Yuumi
+    valid: False
+    reason: "disgusting egirl"
+- model: mainpage.champion
+  pk: 154
+  fields:
+    name: Zac
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 238
+  fields:
+    name: Zed
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 221
+  fields:
+    name: Zeri
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 115
+  fields:
+    name: Ziggs
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 26
+  fields:
+    name: Zilean
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 142
+  fields:
+    name: Zoe
+    valid: False
+    reason: "pedo"
+- model: mainpage.champion
+  pk: 143
+  fields:
+    name: Zyra
+    valid: True
+    reason: ""

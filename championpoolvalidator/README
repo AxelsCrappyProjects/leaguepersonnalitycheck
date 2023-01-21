@@ -1,0 +1,6 @@
+# Useful commands
+
+pip install -r requirements.txt
+python3 manage.py runserver
+python3 manage.py loaddata regions.yaml
+source ~/env/bin/activate

@@ -1,0 +1,23 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+<!DOCTYPE html>
+<div class="title">Your profile did not pass the test.</div>
+<div class="subtitle">Please find below the reasons. To help you improve as a person, we also included a list of flaws commonly associated with the champions you play.</div>
+ 
+<div class="score-container">
+    <div class="score">
+        Your score : <span class="score-bold">{{validated_percentage}}%</span>, your appreciation : <span class="score-bold">{{appreciation}}</span>
+    </div>
+    
+</div>
+<div class="faulty-champions">
+    <div class="champion-bold">The champions you must stop playing in order to become human :</div>
+    {% for champion in unvalidated %}
+    <div class="champion">
+        <div><span class="champion-bold">{{champion.name}}</span> ({{champion.percentage}}%)</div>
+        <div class="reason">{{champion.reason}}</div>
+    </div>
+    {% endfor %}
+</div>
