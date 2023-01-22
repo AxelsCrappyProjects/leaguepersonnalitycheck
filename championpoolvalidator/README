@@ -1,7 +1,8 @@
 # Useful commands
 
-source ~/env/bin/activate
 
+# LOCAL 
+source ~/env/bin/activate
 pip install -r requirements.txt
 python3 manage.py runserver
 python3 manage.py loaddata regions.yaml
@@ -9,4 +10,7 @@ python3 manage.py makemigrations
 
 
 
-prod : source .venv/bin/activate
+# PROD
+
+ssh blrhwuo@ssh.cluster030.hosting.ovh.net -p 22
+source .venv/bin/activate
