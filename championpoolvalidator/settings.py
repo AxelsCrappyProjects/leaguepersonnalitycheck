@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-^5#(a+r3!9rs$)jbrnkdhzz67s@u_$6g62o3#)khe9kzjsefw*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['leaguepersonnalitycheck.fr']
+ALLOWED_HOSTS = ['leaguepersonnalitycheck.fr', 'www.leaguepersonnalitycheck.fr', 'blrhwuo.cluster030.hosting.ovh.net']
 
 
 # Application definition
