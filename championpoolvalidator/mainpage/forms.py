@@ -3,7 +3,8 @@ from .models import Region, SummonerName
 
 class RegionForm(ModelForm):
 
-    query_choices = []
+    query =  Region.objects.all().values_list('name', flat=True)
+    query_choices = [('', 'None')] + [(name, name) for name in query]
     region = ChoiceField(choices = query_choices)
     class Meta:
         model = Region
