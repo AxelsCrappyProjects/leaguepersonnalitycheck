@@ -24,12 +24,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-^5#(a+r3!9rs$)jbrnkdhzz67s@u_$6g62o3#)khe9kzjsefw*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['145.239.37.162', 'leaguepersonnalitycheck.fr', 'www.leaguepersonnalitycheck.fr', 'blrhwuo.cluster030.hosting.ovh.net']
+ALLOWED_HOSTS = ['145.239.37.162', 'leaguepersonnalitycheck.fr', 'www.leaguepersonnalitycheck.fr', 'blrhwuo.cluster030.hosting.ovh.net', '127.0.0.1']
 
 
 # Application definition
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -69,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'championpoolvalidator.wsgi.application'
+WSGI_APPLICATION = 'wsgi.application'
 
 
 # Database
@@ -78,12 +79,8 @@ WSGI_APPLICATION = 'championpoolvalidator.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-        'USER': 'blrhwuoaxel',
-        'PASSWORD': 'Nobruteforcepls123',
-        'HOST': 'localhost',
-        'PORT': 3306
-    }
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    },
 }
 
 
