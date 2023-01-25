@@ -6,8 +6,8 @@ from .models import Champion, ChampionMastery
 from .forms import RegionForm, SummonerNameForm
 from django.shortcuts import redirect
 import requests
-import json
 from django.middleware.csrf import get_token
+import json
 
 def home(request):
 
@@ -30,19 +30,19 @@ def home(request):
     return render(request, 'home.html', context)
 
 
+
 def output(request, region, summoner_name):
 
     path = os.path.join(os.path.dirname(__file__))
     with open(f'{path}/riot_api_key.txt') as file:
         api_key = file.read()
-        
     csrf_token = get_token(request)
     cookies = {'csrftoken': csrf_token}
     headers = {"X-CSRFToken": csrf_token}
-    response = requests.get(f'https://{region}1.api.riotgames.com/lol/summoner/v4/summoners/by-name/{summoner_name}?api_key={api_key}', headers=headers, cookies=cookies)
+    response = requests.get(f'https://{region}.api.riotgames.com/lol/summoner/v4/summoners/by-name/{summoner_name}?api_key={api_key}')
     data = json.loads(response.content.decode('utf-8'))
     summoner_id = data.get('id')
-    mastery_response = requests.get(f'https://{region}1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/{summoner_id}?api_key={api_key}', headers=headers, cookies=cookies)
+    mastery_response = requests.get(f'https://{region}.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/{summoner_id}?api_key={api_key}')
     mastery_data = json.loads(mastery_response.content.decode('utf-8'))
     champion_masteries = []
     total_points = 0

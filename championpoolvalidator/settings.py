@@ -31,7 +31,7 @@ CSRF_TRUSTED_ORIGINS = ['http://*', 'https://*']
 SECRET_KEY = 'django-insecure-^5#(a+r3!9rs$)jbrnkdhzz67s@u_$6g62o3#)khe9kzjsefw*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['145.239.37.162', 'leaguepersonnalitycheck.fr', 'www.leaguepersonnalitycheck.fr', 'blrhwuo.cluster030.hosting.ovh.net', '127.0.0.1']
 
@@ -63,8 +63,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'championpoolvalidator.mainpage.urls'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-print(STATIC_ROOT)
-print(BASE_DIR)
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -81,7 +81,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'wsgi.application'
+WSGI_APPLICATION = 'championpoolvalidator.wsgi.application'
 
 
 # Database
