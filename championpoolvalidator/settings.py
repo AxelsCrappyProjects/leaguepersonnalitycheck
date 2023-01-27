@@ -20,7 +20,8 @@ CSRF_COOKIE_SECURE = True
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-CSRF_TRUSTED_ORIGINS = ['http://*', 'https://*']
+CSRF_TRUSTED_ORIGINS = ['145.239.37.162', 'https://leaguepersonnalitycheck.fr', 'https://www.leaguepersonnalitycheck.fr', 'leaguepersonnalitycheck.fr', 
+'www.leaguepersonnalitycheck.fr', 'blrhwuo.cluster030.hosting.ovh.net', '127.0.0.1']
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
@@ -30,7 +31,8 @@ SECRET_KEY = 'django-insecure-^5#(a+r3!9rs$)jbrnkdhzz67s@u_$6g62o3#)khe9kzjsefw*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['145.239.37.162', 'leaguepersonnalitycheck.fr', 'www.leaguepersonnalitycheck.fr', 'blrhwuo.cluster030.hosting.ovh.net', '127.0.0.1']
+ALLOWED_HOSTS = ['145.239.37.162', 'https://leaguepersonnalitycheck.fr', 'https://www.leaguepersonnalitycheck.fr', 'leaguepersonnalitycheck.fr', 
+'www.leaguepersonnalitycheck.fr', 'blrhwuo.cluster030.hosting.ovh.net', '127.0.0.1']
 
 
 # Application definition
