@@ -39,10 +39,10 @@ def output(request, region, summoner_name):
     csrf_token = get_token(request)
     cookies = {'csrftoken': csrf_token}
     headers = {"X-CSRFToken": csrf_token}
-    response = requests.get(f'https://{region}1.api.riotgames.com/lol/summoner/v4/summoners/by-name/{summoner_name}?api_key={api_key}', headers=headers, cookies=cookies)
+    response = requests.get(f'https://{region}.api.riotgames.com/lol/summoner/v4/summoners/by-name/{summoner_name}?api_key={api_key}', headers=headers, cookies=cookies)
     data = json.loads(response.content.decode('utf-8'))
     summoner_id = data.get('id')
-    mastery_response = requests.get(f'https://{region}1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/{summoner_id}?api_key={api_key}', headers=headers, cookies=cookies)
+    mastery_response = requests.get(f'https://{region}.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/{summoner_id}?api_key={api_key}', headers=headers, cookies=cookies)
     mastery_data = json.loads(mastery_response.content.decode('utf-8'))
     champion_masteries = []
     total_points = 0
@@ -60,7 +60,7 @@ def output(request, region, summoner_name):
     unvalidated = []
     for champion_mastery in champion_masteries:
         champion_mastery.percentage = round((champion_mastery.points / total_points * 100), 2)
-        print(f'Champion : {champion_mastery.name}, percentage : {champion_mastery.percentage}')
+        
         if not champion_mastery.valid:
             unvalidated_percentage += champion_mastery.percentage
             unvalidated.append(champion_mastery)

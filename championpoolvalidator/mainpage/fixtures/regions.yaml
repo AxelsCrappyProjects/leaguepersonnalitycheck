@@ -1,19 +1,19 @@
 - model: mainpage.region
   pk: 1
   fields:
-    name: EUW
+    name: EUW1
 - model: mainpage.region
   pk: 2
   fields:
-    name: NA
+    name: NA1
 - model: mainpage.region
   pk: 3
   fields:
-    name: EUNE
+    name: EUN1
 - model: mainpage.region
   pk: 4
   fields:
-    name: OCE
+    name: OC1
 - model: mainpage.region
   pk: 5
   fields:
@@ -21,19 +21,19 @@
 - model: mainpage.region
   pk: 6
   fields:
-    name: BR
+    name: BR1
 - model: mainpage.region
   pk: 7
   fields:
-    name: LAN
+    name: LA1
 - model: mainpage.region
   pk: 8
   fields:
-    name: LAS
+    name: LA2
 - model: mainpage.region
   pk: 9
   fields:
-    name: JP
+    name: JP1
 - model: mainpage.region
   pk: 10
   fields:
@@ -41,24 +41,24 @@
 - model: mainpage.region
   pk: 11
   fields:
-    name: TR
+    name: TR1
 - model: mainpage.region
   pk: 12
   fields:
-    name: PH
+    name: PH2
 - model: mainpage.region
   pk: 13
   fields:
-    name: SG
+    name: SG2
 - model: mainpage.region
   pk: 14
   fields:
-    name: TH
+    name: TH2
 - model: mainpage.region
   pk: 15
   fields:
-    name: TW
+    name: TW2
 - model: mainpage.region
   pk: 16
   fields:
-    name: VN
+    name: VN2
