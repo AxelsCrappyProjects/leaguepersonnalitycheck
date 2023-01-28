@@ -1,6 +1,9 @@
 {% load static %}
 
 <link rel="stylesheet" href="{% static 'style.css' %}">
+<link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 
 <!DOCTYPE html>
 <div class="title">Your profile did not pass the test.</div>
@@ -12,12 +15,81 @@
     </div>
     
 </div>
-<div class="faulty-champions">
-    <div class="champion-bold">The champions you must stop playing in order to become human :</div>
-    {% for champion in unvalidated %}
-    <div class="champion">
-        <div><span class="champion-bold">{{champion.name}}</span> ({{champion.percentage}}%)</div>
-        <div class="reason">{{champion.reason}}</div>
-    </div>
-    {% endfor %}
+
+
+<div class="chart-container">
+{%block scripts%}
+<script>
+// jquery function
+$(document).ready(function(){
+
+
+        var ctx = document.getElementById('myChart').getContext('2d');
+        const backgroundColor = ['red', 'blue', 'yellow', 'orange', 'brown', 'red', 'black', 'purple', 'pink']
+        var myChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: [{% for word, data in words.items %}"{{word}}",{%endfor%}], //loop through queryset, 
+                datasets: [{
+                    label: '# of users',
+                    data: [{%for word, data in words.items %}{{data.percentage}},{%endfor%}],
+                    backgroundColor: [{%for word, data in words.items %}'{{data.color}}',{%endfor%}],
+                    
+                    borderColor: [{%for word, data in words.items %}'{{data.color}}',{%endfor%}],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                
+                tooltips: {
+                    callbacks: {
+
+                        title: function(tooltipItem, data) {
+                            index = tooltipItem[0].index
+                            return data.labels[index] + ' (' + data.datasets[0].data[index] + '%)'
+                        },
+                        label: function(tooltipItem, data) {
+                            
+
+                            index = tooltipItem.index;
+                            word = data.labels[index]
+                            {% for word, data in words.items %}
+                            if (word == '{{word}}') {
+                                cpt = 0;
+                                output_str = ""
+                                {% for champion in data.champions %}
+                                    
+                                    if (cpt == 0) {
+                                        output_str += '{{champion}}';
+                                    }
+                                    else {
+                                        output_str += ', {{champion}}'
+                                    }
+                                    cpt += 1;
+                                {% endfor %}
+                            }
+                            {% endfor %}
+                            return output_str
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                
+            }
+        });
+    });
+</script>
+{%endblock scripts%}
+
+{%block content%}
+<!-- displaying the chart -->
+<!-- you can also play around with the width and height to increase or decrease the chart size -->
+<canvas id="myChart" width="400" height="100"></canvas>  
+{%endblock content%}
 </div>
+
+
