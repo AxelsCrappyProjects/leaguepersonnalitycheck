@@ -1,3 +1,4 @@
+import math
 import os
 from django.shortcuts import render
 from .models import Champion, ChampionMastery
@@ -79,10 +80,12 @@ def output(request, region, summoner_name):
     words['normal'] = {'percentage': 100 - unvalidated_percentage, 'color': 'grey', 'champions': ['Respectable champions']}
     words['others'] = {'percentage': rest, 'color': 'black', 'champions': ['Other non-respectable champions']}
     champion_masteries = sorted(champion_masteries, key=lambda x : x.percentage)
+
     validated_percentage = round(100 - unvalidated_percentage, 2)
-    appreciations = ["public ennemy n°1", "literally the antechrist", "threat to society", "disgusting", "awful", "decent", "ok", "good", "very good", "angel"]
-    index = round(validated_percentage / 10)
+    appreciations = ["public ennemy n°1", "literally the antechrist", "threat to society", "disgusting", "awful", "decent", "ok", "good", "very good", "angel", "god"]
+    index = math.floor(validated_percentage / 10)
     appreciation = appreciations[index]
+
     if validated_percentage < 50:
         return render(request, 'failed.html', context={'champions': champion_masteries, 'unvalidated': unvalidated, 'validated_percentage': validated_percentage, 'appreciation': appreciation, 'words': words})
     
