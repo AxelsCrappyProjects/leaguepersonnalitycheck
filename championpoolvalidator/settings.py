@@ -20,8 +20,7 @@ CSRF_COOKIE_SECURE = True
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-CSRF_TRUSTED_ORIGINS = ['145.239.37.162', 'https://leaguepersonnalitycheck.fr', 'https://www.leaguepersonnalitycheck.fr', 'leaguepersonnalitycheck.fr', 
-'www.leaguepersonnalitycheck.fr', 'blrhwuo.cluster030.hosting.ovh.net', '127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['https://leaguepersonnalitycheck.fr', 'https://www.leaguepersonnalitycheck.fr']
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
