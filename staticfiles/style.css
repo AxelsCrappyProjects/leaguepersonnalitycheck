@@ -74,3 +74,16 @@
     max-width:80%;
     margin-left:10%;
 }
+.body {
+    height:90%;
+}
+
+.footer {
+    height:10%;
+    text-align:center;
+}
+
+.footer-text {
+    font-size:20px;
+    font-weight:bold;
+}
