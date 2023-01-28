@@ -20,65 +20,71 @@
     <script>
     // jquery function
     $(document).ready(function(){
-    
-    
-            var ctx = document.getElementById('myChart').getContext('2d');
-            const backgroundColor = ['red', 'blue', 'yellow', 'orange', 'brown', 'red', 'black', 'purple', 'pink']
-            var myChart = new Chart(ctx, {
-                type: 'pie',
-                data: {
-                    labels: [{% for word, data in words.items %}"{{word}}",{%endfor%}], //loop through queryset, 
-                    datasets: [{
-                        label: '# of users',
-                        data: [{%for word, data in words.items %}{{data.percentage}},{%endfor%}],
-                        backgroundColor: [{%for word, data in words.items %}'{{data.color}}',{%endfor%}],
-                        
-                        borderColor: [{%for word, data in words.items %}'{{data.color}}',{%endfor%}],
-                        borderWidth: 1
-                    }]
+        
+        Chart.Legend.prototype.afterFit = function() {
+            this.height = this.height + 50;
+        };
+
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: [{% for word, data in words.items %}"{{word}}",{%endfor%}], //loop through queryset, 
+                datasets: [{
+                    label: '# of users',
+                    data: [{%for word, data in words.items %}{{data.percentage}},{%endfor%}],
+                    backgroundColor: [{%for word, data in words.items %}'{{data.color}}',{%endfor%}],
+                    borderColor: [{%for word, data in words.items %}'{{data.color}}',{%endfor%}],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                legend: {
+                    labels: {
+                        fontSize: 22
+                    }
                 },
-                options: {
-                    
-                    tooltips: {
-                        callbacks: {
-    
-                            title: function(tooltipItem, data) {
-                                index = tooltipItem[0].index
-                                return data.labels[index] + ' (' + data.datasets[0].data[index] + '%)'
-                            },
-                            label: function(tooltipItem, data) {
-                                
-    
-                                index = tooltipItem.index;
-                                word = data.labels[index]
-                                {% for word, data in words.items %}
-                                if (word == '{{word}}') {
-                                    cpt = 0;
-                                    output_str = ""
-                                    {% for champion in data.champions %}
-                                        
-                                        if (cpt == 0) {
-                                            output_str += '{{champion}}';
-                                        }
-                                        else {
-                                            output_str += ', {{champion}}'
-                                        }
-                                        cpt += 1;
-                                    {% endfor %}
-                                }
+                tooltips: {
+                    callbacks: {
+
+                        title: function(tooltipItem, data) {
+                            index = tooltipItem[0].index
+                            return data.labels[index] + ' (' + Math.round(data.datasets[0].data[index]) + '%)'
+                        },
+                        label: function(tooltipItem, data) {
+                            
+
+                            index = tooltipItem.index;
+                            word = data.labels[index]
+                            {% for word, data in words.items %}
+                            if (word == '{{word}}') {
+                                cpt = 0;
+                                output_str = ""
+                                {% for champion in data.champions %}
+                                    
+                                    if (cpt == 0) {
+                                        output_str += '{{champion}}';
+                                    }
+                                    else {
+                                        output_str += ', {{champion}}'
+                                    }
+                                    cpt += 1;
                                 {% endfor %}
-                                return output_str
                             }
+                            {% endfor %}
+                            return output_str
                         }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        
                     },
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    },
-                    
+
                 }
-            });
+                
+            }
         });
     </script>
     {%endblock scripts%}
@@ -89,3 +95,4 @@
     <canvas id="myChart" width="400" height="100"></canvas>  
     {%endblock content%}
     </div>
+
