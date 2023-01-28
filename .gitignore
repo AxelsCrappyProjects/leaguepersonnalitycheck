@@ -3,3 +3,6 @@
 db.sqlite3
 __pycache__
 *.git
+settings.py
+app.py
+wsgi.py

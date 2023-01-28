@@ -17,7 +17,7 @@ from pathlib import Path
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 
-ENVIRONMENT = "DEV"
+ENVIRONMENT = "PROD"
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
