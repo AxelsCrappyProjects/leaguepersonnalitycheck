@@ -77,7 +77,8 @@ def output(request, region, summoner_name):
         elif not champion_mastery.valid:
             rest += champion_mastery.percentage
     rest = round(rest, 2)
-    words['normal'] = {'percentage': 100 - unvalidated_percentage, 'color': 'grey', 'champions': ['Respectable champions']}
+    normal = round(100 - unvalidated_percentage, 2)
+    words['normal'] = {'percentage': normal, 'color': 'grey', 'champions': ['Respectable champions']}
     words['others'] = {'percentage': rest, 'color': 'black', 'champions': ['Other non-respectable champions']}
     champion_masteries = sorted(champion_masteries, key=lambda x : x.percentage)
 
