@@ -7,11 +7,14 @@ For more information on this file, see
 https://docs.djangoproject.com/en/4.1/howto/deployment/wsgi/
 """
 
+from django.conf import settings
 import os
-os.environ['HTTPS'] = "on"
 
-this_file = "/home/blrhwuo/leaguepersonnalitycheck/.venv/bin/activate_this.py"
-exec(open(this_file).read(), {'__file__': this_file})
+if settings.ENVIRONMENT != "DEV":
+
+    os.environ['HTTPS'] = "on"
+    this_file = "/home/blrhwuo/leaguepersonnalitycheck/.venv/bin/activate_this.py"
+    exec(open(this_file).read(), {'__file__': this_file})
 
 from whitenoise import WhiteNoise
 

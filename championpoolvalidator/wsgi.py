@@ -8,9 +8,11 @@ https://docs.djangoproject.com/en/4.1/howto/deployment/wsgi/
 """
 
 import os
+from django.conf import settings
 
-this_file = "/home/blrhwuo/leaguepersonnalitycheck/.venv/bin/activate_this.py"
-exec(open(this_file).read(), {'__file__': this_file})
+if settings.ENVIRONMENT != "DEV":
+    this_file = "/home/blrhwuo/leaguepersonnalitycheck/.venv/bin/activate_this.py"
+    exec(open(this_file).read(), {'__file__': this_file})
 
 from django.core.wsgi import get_wsgi_application
 
