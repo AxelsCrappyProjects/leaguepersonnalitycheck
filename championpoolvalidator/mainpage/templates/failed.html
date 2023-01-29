@@ -6,8 +6,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 
 <!DOCTYPE html>
+<head>
+    <title>League Personnality Check</title>
+</head>
+<div class="failed_background">
 <div class="title">Your profile did not pass the test.</div>
-<div class="subtitle">Please find below the reasons. To help you improve as a person, we also included a list of flaws commonly associated with the champions you play.</div>
+<div class="subtitle">Please find below your personnality analysis.</div>
  
 <div class="score-container">
     <div class="score">
@@ -36,15 +40,15 @@ $(document).ready(function(){
                     label: '# of users',
                     data: [{%for word, data in words.items %}{{data.percentage}},{%endfor%}],
                     backgroundColor: [{%for word, data in words.items %}'{{data.color}}',{%endfor%}],
-                    
-                    borderColor: [{%for word, data in words.items %}'{{data.color}}',{%endfor%}],
-                    borderWidth: 1
+                    borderColor: "white",
+                    borderWidth: 2
                 }]
             },
             options: {
                 legend: {
                     labels: {
-                        fontSize: 22
+                        fontSize: 22,
+                        fontColor: "white"
                     }
                 },
                 tooltips: {
@@ -99,5 +103,4 @@ $(document).ready(function(){
 <canvas id="myChart" width="400" height="100"></canvas>  
 {%endblock content%}
 </div>
-
-
+</div>

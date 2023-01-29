@@ -9,6 +9,10 @@
 
 
 <!DOCTYPE html>
+<head>
+    <title>League Personnality Check</title>
+</head>
+<div class="page">
 <div class="body">
 <div class="title">Welcome to the League Personnality Test !</div>
 <div class="subtitle">Please enter your region and summoner name below.</div>
@@ -16,21 +20,25 @@
 <div class="form">
     <form action="" method="post">
         {% csrf_token %}
-        <div class="form-group">
-            {{ region_form }}
+        <div class="inputs">
+            <div class="form-group">
+                {{ region_form }}
+            </div>
+            <div class="form-group">
+                {{ summoner_name_form }}
+            </div>
         </div>
-        <div class="form-group">
-            {{ summoner_name_form }}
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" name="submit-form" class="btn btn-primary">Find out who I am</button>
     </form>
 </div>
+
 </div>
 <div class="footer">
     <div class="footer-text">
-        <p>v0.2 - Please note that this project has just started. There's a lot more to come !</p>
+        <p>v0.2 - art by @xerexuwu on twit </p>
     </div>
     <div class="footer-text">
         <p>Bug report / Suggestions / 5'0 mentally challenged goth girls : hmu on discord ! zaza enjoyer#0932</p>
     </div>
+</div>
 </div>

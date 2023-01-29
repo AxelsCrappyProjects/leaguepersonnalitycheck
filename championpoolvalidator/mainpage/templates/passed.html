@@ -5,8 +5,17 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 
 <!DOCTYPE html>
+<<<<<<< HEAD
 <div class="title">Congratulations ! Your profile passed the test.</div>
 <div class="subtitle">Please find below your score, and how to get a better one.</div>
+=======
+<head>
+    <title>League Personnality Check</title>
+</head>
+<div class="passed_background">
+<div class="title-passed">Congratulations ! Your profile passed the test.</div>
+<div class="subtitle-passed">Please find below your personnality analysis.</div>
+>>>>>>> develop
  
 <div class="score-container-passed">
     <div class="score">
@@ -34,14 +43,25 @@
                     label: '# of users',
                     data: [{%for word, data in words.items %}{{data.percentage}},{%endfor%}],
                     backgroundColor: [{%for word, data in words.items %}'{{data.color}}',{%endfor%}],
+<<<<<<< HEAD
                     borderColor: [{%for word, data in words.items %}'{{data.color}}',{%endfor%}],
                     borderWidth: 1
+=======
+                    borderColor: "white",
+                    borderWidth: 2
+>>>>>>> develop
                 }]
             },
             options: {
                 legend: {
                     labels: {
+<<<<<<< HEAD
                         fontSize: 22
+=======
+                        fontSize: 22,
+                        fontColor: "black",
+                        fontStyle: "bold"
+>>>>>>> develop
                     }
                 },
                 tooltips: {
@@ -96,4 +116,8 @@
 <canvas id="myChart" width="400" height="100"></canvas>  
 {%endblock content%}
 </div>
+<<<<<<< HEAD
 
+=======
+</div>
+>>>>>>> develop
