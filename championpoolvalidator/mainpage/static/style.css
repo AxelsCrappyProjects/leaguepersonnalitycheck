@@ -3,9 +3,24 @@
     font-size:40px;
     margin-bottom:2%;
     text-align:center;
-    color: white;
+    color: #EFDE90;
 }
 .subtitle {
+    font-weight:bold;
+    font-size:25px;
+    text-align:center;
+    color:#EFDE90;
+    width:85%;
+    margin-left:7.5%;
+}
+.title-failed {
+    font-weight:bold;
+    font-size:40px;
+    margin-bottom:2%;
+    text-align:center;
+    color: white;
+}
+.subtitle-failed {
     font-weight:bold;
     font-size:25px;
     text-align:center;
