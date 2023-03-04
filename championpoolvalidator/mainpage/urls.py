@@ -21,6 +21,6 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', home, name='home'),
     path('output/<str:region>/<str:summoner_name>', output, name='output'),
-    path('discord_api/<stf:summoner_name>/<str:region>', discord_api, name='discord_api')
+    path('discord_api/<str:summoner_name>/<str:region>', discord_api, name='discord_api')
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
