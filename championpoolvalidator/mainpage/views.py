@@ -149,6 +149,6 @@ def discord_api(request, summoner_name, region):
         appreciation = appreciations[index]
         result = 'FAILED' if validated_percentage < 50 else 'PASSED'
         
-        response_data = {'result': result, 'appreciation': appreciation, 'validated_percentage' : validated_percentage, 'champion_masteries': champion_masteries}
+        response_data = {'result': result, 'appreciation': appreciation, 'validated_percentage' : validated_percentage, 'words': words}
 
-        return HttpResponse(response_data, headers={'Content-Type': 'application/json'})
+        return HttpResponse(json.dumps(response_data), headers={'Content-Type': 'application/json'})
