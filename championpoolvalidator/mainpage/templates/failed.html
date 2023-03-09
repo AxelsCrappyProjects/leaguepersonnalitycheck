@@ -30,6 +30,11 @@ $(document).ready(function(){
         Chart.Legend.prototype.afterFit = function() {
             this.height = this.height + 50;
         };
+        function htmlDecode(input) {
+            const textArea = document.createElement("textarea");
+            textArea.innerHTML = input;
+            return textArea.value;
+        }
 
         var ctx = document.getElementById('myChart').getContext('2d');
         var myChart = new Chart(ctx, {
@@ -70,10 +75,10 @@ $(document).ready(function(){
                                 {% for champion in data.champions %}
                                     
                                     if (cpt == 0) {
-                                        output_str += '{{champion}}';
+                                        output_str += htmlDecode('{{champion}}');
                                     }
                                     else {
-                                        output_str += ', {{champion}}'
+                                        output_str += htmlDecode(', {{champion}}');
                                     }
                                     cpt += 1;
                                 {% endfor %}
