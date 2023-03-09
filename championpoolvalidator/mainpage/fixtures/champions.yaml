@@ -530,8 +530,8 @@
   pk: 20
   fields:
     name: Nunu & Willump
-    valid: True
-    reason: ""
+    valid: False
+    reason: "alcoholic"
 - model: mainpage.champion
   pk: 2
   fields:
