@@ -64,12 +64,13 @@ def output(request, region, summoner_name):
     rest = 0
     for champion_mastery in champion_masteries:
         champion_mastery.percentage = round((champion_mastery.points / total_points * 100), 2)
-        if not champion_mastery.valid and champion_mastery.percentage > 0.8:
+        if not champion_mastery.valid and champion_mastery.percentage > 0.3:
             unvalidated_percentage += champion_mastery.percentage
             unvalidated.append(champion_mastery)
             data =  words.get(champion_mastery.reason)
             if data:
                 data['percentage'] += champion_mastery.percentage
+                data['percentage'] = round(data['percentage'], 2)
                 data['champions'].append(champion_mastery.name)
             else:
                 words[champion_mastery.reason] = {'percentage' : champion_mastery.percentage, 'color': colors[color_index], 'champions': [champion_mastery.name]}
@@ -126,12 +127,13 @@ def discord_api(request, summoner_name, region):
         rest = 0
         for champion_mastery in champion_masteries:
             champion_mastery.percentage = round((champion_mastery.points / total_points * 100), 2)
-            if not champion_mastery.valid and champion_mastery.percentage > 0.8:
+            if not champion_mastery.valid and champion_mastery.percentage > 0.3:
                 unvalidated_percentage += champion_mastery.percentage
                 unvalidated.append(champion_mastery)
                 data =  words.get(champion_mastery.reason)
                 if data:
                     data['percentage'] += champion_mastery.percentage
+                    data['percentage'] = round(data['percentage'], 2)
                     data['champions'].append(champion_mastery.name)
                 else:
                     words[champion_mastery.reason] = {'percentage' : champion_mastery.percentage, 'champions': [champion_mastery.name]}

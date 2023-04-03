@@ -461,6 +461,12 @@
     valid: False
     reason: "drug abuser"
 - model: mainpage.champion
+  pk: 902
+  fields:
+    name: Milio
+    valid: True
+    reason: ""
+- model: mainpage.champion
   pk: 21
   fields:
     name: Miss Fortune
