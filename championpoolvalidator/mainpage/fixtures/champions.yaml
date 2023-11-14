@@ -976,3 +976,15 @@
     name: Zyra
     valid: True
     reason: ""
+- model: mainpage.champion 
+  pk: 950
+  fields:
+    name: Naafiri
+    valid: True
+    reason: ""
+- model: mainpage.champion
+  pk: 233
+  fields:
+    name: Briar
+    valid: False
+    reason: "sex offender"

@@ -39,6 +39,8 @@ def output(request, region, summoner_name):
     cookies = {'csrftoken': csrf_token}
     headers = {"X-CSRFToken": csrf_token}
     response = requests.get(f'https://{region}.api.riotgames.com/lol/summoner/v4/summoners/by-name/{summoner_name}?api_key={api_key}', headers=headers, cookies=cookies)
+    if response.status_code != 200:
+        return render(request, 'nomatch.html')
     data = json.loads(response.content.decode('utf-8'))
     summoner_id = data.get('id')
     mastery_response = requests.get(f'https://{region}.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/{summoner_id}?api_key={api_key}')
@@ -48,13 +50,17 @@ def output(request, region, summoner_name):
     for data in mastery_data:
         points = data.get('championPoints')
         total_points += points
-        champion = Champion.objects.get(pk=data.get('championId'))
-        name = champion.name
-        valid = champion.valid
-        reason = champion.reason
-        champion_mastery = ChampionMastery(name=name, valid=valid, reason=reason, points=points)
-        champion_masteries.append(champion_mastery)
-    
+        try:
+            champion = Champion.objects.get(pk=data.get('championId'))
+        except:
+            print(f"New champion : {data.get('championId')}")
+        else:
+            name = champion.name
+            valid = champion.valid
+            reason = champion.reason
+            champion_mastery = ChampionMastery(name=name, valid=valid, reason=reason, points=points)
+            champion_masteries.append(champion_mastery)
+
     unvalidated_percentage = 0
     unvalidated = []
     colors = ['#3F1453','#1E3C6E','#702403', '#2D93B2','#3E4167', '#30A2A9', '#E2933C', '#46F8CF', '#8EAE32', '#0A90BA', '#D58A1B', '#BBBA39', '#AC0717',
@@ -154,3 +160,5 @@ def discord_api(request, summoner_name, region):
         response_data = {'result': result, 'appreciation': appreciation, 'validated_percentage' : validated_percentage, 'words': words}
 
         return HttpResponse(json.dumps(response_data), headers={'Content-Type': 'application/json'})
+	
+		
